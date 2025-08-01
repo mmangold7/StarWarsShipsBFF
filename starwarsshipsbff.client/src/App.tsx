@@ -9,10 +9,10 @@ interface Forecast {
 }
 
 function App() {
-    const [forecasts, setForecasts] = useState<Forecast[]>();
+    const [forecasts, setStarships] = useState<Forecast[]>();
 
     useEffect(() => {
-        populateWeatherData();
+        populateStarshipsData();
     }, []);
 
     const contents = forecasts === undefined
@@ -40,17 +40,16 @@ function App() {
 
     return (
         <div>
-            <h1 id="tableLabel">Weather forecast</h1>
-            <p>This component demonstrates fetching data from the server.</p>
+            <h1 id="tableLabel">Star Wars Starships</h1>
             {contents}
         </div>
     );
 
-    async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
+    async function populateStarshipsData() {
+        const response = await fetch('starships');
         if (response.ok) {
             const data = await response.json();
-            setForecasts(data);
+            setStarships(data);
         }
     }
 }
