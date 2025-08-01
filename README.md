@@ -36,6 +36,7 @@ This repository contains a visual studio solution originally created as a new Re
 1. Definitely move the standardization logic from frontend to backend, so it's done once, where it makes sense, and cached
 2. Add unit tests for each of the data inconsistencies with the manufacturers
 3. Add at least one unit test for the pagination logic to ensure it stops when next is null or empty
-4. Perhaps a logout button
-5. UI could be improved visually
-6. This auth is only good for a demo, need password hashing for real applications
+4. Fix outstanding bug with Nubia Star Drives data cleansing (unit test and fix standardization logic after moving to backend)
+5. Perhaps a logout button
+6. UI could be improved visually
+7. This auth is only good for a demo, need password hashing for real applications
