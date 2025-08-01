@@ -14,7 +14,7 @@ public class StarWarsApiService // typed httpclient to be registered in program.
         _httpClient.BaseAddress = new Uri("https://www.swapi.tech/api/");
     }
 
-    public async Task<IEnumerable<Starship>?> GetAllStarshipsAsync()
+    public async Task<IEnumerable<Starship>> GetAllStarshipsAsync()
     {
         var allStarships = new List<Starship>();
         var nextStarshipsPagePathAndQuery = StarshipsFirstPagePathAndQuery;

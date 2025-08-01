@@ -3,8 +3,9 @@ using StarWarsShipsBFF.Server;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient<StarWarsApiService>();
-
+builder.Services.AddMemoryCache();
 builder.Services.AddControllers();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
@@ -20,11 +21,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.MapControllers();
-
 app.MapFallbackToFile("/index.html");
 
 app.Run();
