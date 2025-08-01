@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using StarWarsShipsBFF.Server.DTOs;
@@ -6,6 +7,7 @@ namespace StarWarsShipsBFF.Server.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Authorize]
 public class StarshipsController(
     StarWarsApiService swapiService,
     ILogger<StarshipsController> logger,

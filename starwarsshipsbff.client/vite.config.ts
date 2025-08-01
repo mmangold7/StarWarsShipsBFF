@@ -50,7 +50,11 @@ export default defineConfig({
             '^/starships': {
                 target,
                 secure: false
-            }
+            },
+            '^/auth': {              
+                target,
+                secure: false
+           }
         },
         port: parseInt(env.DEV_SERVER_PORT || '51531'),
         https: {
